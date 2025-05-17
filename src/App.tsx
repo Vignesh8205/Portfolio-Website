@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Code, Mail, Github, Linkedin, User, Briefcase, FileCode, Send, Award, Book, Clock, Coffee, Globe, Heart } from 'lucide-react';
+import { Code, Mail, Github, Linkedin, User, Briefcase, FileCode, Send, Award, Book, Clock, Coffee, Globe, Heart, Code2, BugPlay, BadgeCheck } from 'lucide-react';
 import { ThemeToggle } from './components/ThemeToggle';
 import { Section } from './components/Section';
 import { ProjectCard } from './components/ProjectCard';
@@ -7,6 +7,8 @@ import profile from '../src/assets/profile.jpg'
 import resume from '../src/assets/Vignesh_Resume.pdf'
 import ContactWidget from './components/contactWidget/contactwidget';
 import { socialmedialink } from './Data';
+import portfolio from '../src/assets/portfolio.png'
+import AboutSection from './components/sections/About';
 
 function App() {
   const [isDark, setIsDark] = useState(false);
@@ -28,15 +30,26 @@ function App() {
       githubUrl: "https://github.com/Vignesh8205/KvpCart",
       liveUrl: "#"
     },
-    
+    {
+      title: "Portfolio Website",
+      description: "A responsive and modern portfolio website built with React and Tailwind CSS to showcase my projects and skills.",
+      image: portfolio, // You can replace this with a more relevant image URL if needed
+      technologies: ["React", "Tailwind CSS", "React Icons"],
+      githubUrl: "https://github.com/Vignesh8205/Portfolio-Website",
+      liveUrl: "#" // Replace with the actual deployed link if available
+    }
+
+
   ];
 
-  const stats = [
-    { icon: Coffee, label: "Coffee Consumed", value: "1,234+" },
-    { icon: Clock, label: "Hours Coded", value: "5,000+" },
-    { icon: Heart, label: "Happy Clients", value: "100+" },
-    { icon: Globe, label: "Countries Reached", value: "25+" },
-  ];
+ const stats = [
+  { icon: Coffee, label: "Coffee Consumed", value: "1,234+" },
+  { icon: Clock, label: "Hours Coded", value: "5,000+" },
+  { icon: Heart, label: "Happy Clients", value: "10+" },
+  { icon: Code2, label: "Lines of Code", value: "2L+" },
+  { icon: BugPlay, label: "Test Cases Automated", value: "30+" },
+  { icon: BadgeCheck, label: "Deployments Done", value: "2+" },
+];
 
   const testimonials = [
     {
@@ -86,10 +99,25 @@ function App() {
               Full Stack Developer
             </h1>
 
-            {/* Description */}
-            <p className="text-base sm:text-lg lg:text-2xl text-gray-700 dark:text-gray-300 mb-10 max-w-2xl mx-auto lg:mx-0">
-              I build exceptional and scalable web applications using modern technologies.
+            <p className="relative mx-auto lg:mx-0 max-w-2xl mb-10 text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg lg:text-2xl font-semibold font-[Poppins]">
+              🚀 I build exceptional, scalable web applications using the{" "}
+              <span className="relative inline-block text-indigo-600 dark:text-indigo-400 before:absolute before:inset-0 before:bg-indigo-100 dark:before:bg-indigo-900 before:-rotate-2 before:-skew-y-1 before:rounded-md before:-z-10 before:animate-highlight">
+                MERN stack
+              </span>{" "}
+              — MongoDB, Express.js, React.js, and Node.js. With a strong foundation in full‑stack JavaScript development, I deliver high‑performance, maintainable solutions tailored to modern business needs.
+              <br />
+              <br />
+              🧪 In addition to development, I’m proficient in automation testing using{" "}
+              <span className="relative inline-block text-teal-600 dark:text-teal-400 before:absolute before:inset-0 before:bg-teal-100 dark:before:bg-teal-900 before:-rotate-2 before:-skew-y-1 before:rounded-md before:-z-10 before:animate-highlight">
+                Cypress
+              </span>
+              ,{" "}
+              <span className="relative inline-block text-teal-600 dark:text-teal-400 before:absolute before:inset-0 before:bg-teal-100 dark:before:bg-teal-900 before:-rotate-2 before:-skew-y-1 before:rounded-md before:-z-10 before:animate-highlight">
+                Playwright
+              </span>
+              , and API testing tools, ensuring reliability and performance across every layer of the application.
             </p>
+
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 animate-fadeInUp duration-1000 delay-300">
@@ -149,45 +177,12 @@ function App() {
         </div>
       </Section>
 
-      {/* About Section */}
-      <Section id="about" title="About Me">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="flex-1">
-              <h3 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
-                Who am I?
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-6">
-                I'm a passionate Full Stack Developer with expertise in building modern web applications.
-                With a strong foundation in both frontend and backend technologies, I create seamless
-                user experiences while ensuring robust and scalable backend systems.
-              </p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
-                  <User className="w-5 h-5 text-blue-500" />
-                  <span>5+ Years Experience</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
-                  <FileCode className="w-5 h-5 text-purple-500" />
-                  <span>50+ Projects</span>
-                </div>
-              </div>
-            </div>
-            <div className="flex-1">
-              <div className="grid grid-cols-2 gap-4">
-                {['React', 'Node.js', 'TypeScript', 'MongoDB', 'AWS', 'Docker'].map((skill) => (
-                  <div
-                    key={skill}
-                    className="p-4 bg-white dark:bg-slate-800 rounded-lg shadow-md text-center transform hover:-translate-y-1 transition-transform hover:shadow-lg"
-                  >
-                    <p className="font-semibold bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">{skill}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </Section>
+     {/* About Section */}
+
+      <AboutSection/>
+
+
+
 
       {/* Services Section */}
       <Section id="services" title="What I Do">
@@ -197,27 +192,43 @@ function App() {
               {
                 icon: Globe,
                 title: "Web Development",
-                description: "Building responsive and performant web applications with modern frameworks"
+                description: "Building full-stack web applications using the MERN stack and modern deployment practices"
               },
               {
-                icon: Book,
-                title: "Technical Consulting",
-                description: "Providing expert advice on architecture and technology choices"
+                icon: FileCode,
+                title: "Frontend Development",
+                description: "Developing responsive, component-based UIs using React, MUI, and Tailwind CSS"
+              },
+              {
+                icon: Code,
+                title: "Backend API Development",
+                description: "Creating scalable REST APIs with Node.js, Express, and MongoDB"
               },
               {
                 icon: Award,
-                title: "UI/UX Design",
-                description: "Creating beautiful and intuitive user interfaces with attention to detail"
+                title: "Automation Testing - Cypress",
+                description: "Implementing UI and API automation testing using Cypress for end-to-end reliability"
+              },
+              {
+                icon: Book,
+                title: "Automation Testing - Playwright",
+                description: "Building fast and powerful UI/API automation suites with Playwright"
+              },
+              {
+                icon: Send,
+                title: "Manual API Testing",
+                description: "Efficient API testing and validation using Postman and Thunder Client"
               }
-            ].map(({ icon: Icon, title, description }) => (
-              <div key={title} className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg transform hover:-translate-y-2 transition-all duration-300">
-                <div className="w-12 h-12 mb-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center text-white">
-                  <Icon className="w-6 h-6" />
+            ]
+              .map(({ icon: Icon, title, description }) => (
+                <div key={title} className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg transform hover:-translate-y-2 transition-all duration-300">
+                  <div className="w-12 h-12 mb-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center text-white">
+                    <Icon className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">{title}</h3>
+                  <p className="text-gray-600 dark:text-gray-300">{description}</p>
                 </div>
-                <h3 className="text-xl font-semibold mb-2 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">{title}</h3>
-                <p className="text-gray-600 dark:text-gray-300">{description}</p>
-              </div>
-            ))}
+              ))}
           </div>
         </div>
       </Section>
@@ -301,7 +312,7 @@ function App() {
           </form>
         </div>
       </Section>
-      <ContactWidget/>
+      <ContactWidget />
     </div>
   );
 }
