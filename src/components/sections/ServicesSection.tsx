@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { Section } from '../Section'
 import { Award, Book, Code, FileCode, Globe, Send } from 'lucide-react'
 

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { Section } from '../Section'
 import { BadgeCheck, BugPlay, Clock, Code2, Coffee, Heart } from 'lucide-react';
 

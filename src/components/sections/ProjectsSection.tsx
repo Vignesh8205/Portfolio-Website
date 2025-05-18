@@ -1,4 +1,3 @@
-import React from 'react'
 
 import portfolio from '../../assets/portfolio.png'
 import { Section } from '../Section';

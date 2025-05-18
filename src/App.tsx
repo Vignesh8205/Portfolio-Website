@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { Code, Mail, Github, Linkedin, User, Briefcase, FileCode, Send, Award, Book, Clock, Coffee, Globe, Heart, Code2, BugPlay, BadgeCheck } from 'lucide-react';
+import  { useEffect, useState } from 'react';
+import { Code, Mail, Github, Linkedin, Briefcase } from 'lucide-react';
 import { ThemeToggle } from './components/ThemeToggle';
-import { Section } from './components/Section';
+
 import profile from '../src/assets/profile.jpg'
 import resume from '../src/assets/Vignesh_Resume.pdf'
 import ContactWidget from './components/contactWidget/contactwidget';
