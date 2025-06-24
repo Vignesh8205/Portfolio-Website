@@ -1,4 +1,4 @@
-import  { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Code, Mail, Github, Linkedin, Briefcase } from 'lucide-react';
 import { ThemeToggle } from './components/ThemeToggle';
 
@@ -12,6 +12,7 @@ import ServicesSection from './components/sections/ServicesSection';
 import ProjectsSection from './components/sections/ProjectsSection';
 import TestimonialsSection from './components/sections/TestimonialsSection';
 import ContactSection from './components/sections/ContactSection';
+import Education from './components/sections/Education';
 
 function App() {
   const [isDark, setIsDark] = useState(false);
@@ -114,12 +115,18 @@ function App() {
       <StatsSection />
       {/* About Section */}
       <AboutSection />
+      {/* Education Section */}
+      <Education />
       {/* Services Section */}
       <ServicesSection />
       {/* Projects Section */}
       <ProjectsSection />
+
+      
+
       {/* Testimonials Section */}
       <TestimonialsSection />
+
       {/* Contact Section */}
       <ContactSection />
 

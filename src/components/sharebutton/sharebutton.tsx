@@ -53,10 +53,10 @@ I'm excited to connect with you! 🎉
 
 
   return (
-    <div className="relative group inline-block">
+    <div className="relative group inline-block ">
       <button
         onClick={handleShare}
-        className="text-blue-600 border border-gray-300 p-2 rounded-md hover:bg-gray-100 transition duration-200"
+        className="text-white-500 border border-gray-300 p-2 rounded-md hover:bg-gray-100 transition duration-200"
       >
         <MdShare size={20} />
       </button>

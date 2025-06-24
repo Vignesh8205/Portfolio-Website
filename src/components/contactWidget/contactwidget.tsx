@@ -33,7 +33,7 @@ const ContactWidget: React.FC = () => {
                             <BsPhone size={24} />
                         </a>
 
-                        <div className="bg-white-500 text-white p-3 rounded-full shadow-lg hover:bg-white-600 transition duration-300">
+                        <div className="bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-white-600 transition duration-300">
                             <ShareButton />
                         </div>
 
