@@ -10,7 +10,7 @@ import AboutSection from './components/sections/About';
 import StatsSection from './components/sections/StatsSection';
 import ServicesSection from './components/sections/ServicesSection';
 import ProjectsSection from './components/sections/ProjectsSection';
-import TestimonialsSection from './components/sections/TestimonialsSection';
+
 import ContactSection from './components/sections/ContactSection';
 import Education from './components/sections/Education';
 
@@ -125,7 +125,7 @@ function App() {
       
 
       {/* Testimonials Section */}
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
 
       {/* Contact Section */}
       <ContactSection />
