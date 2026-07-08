@@ -11,12 +11,36 @@ export default function ProjectsSection() {
 
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce platform with React, Node.js, and MongoDB",
-      image: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=1600",
-      technologies: ["React", "Node.js", "MongoDB", "Redux"],
-      githubUrl: "https://github.com/Vignesh8205/KvpCart",
-      liveUrl: "#"
+      title: "PlayVision – AI Test Reporter",
+      description: "An intelligent, high-performance Playwright reporter using a React-based SPA. Integrates local (Ollama) and cloud (OpenAI) LLMs to automatically analyze test failures.",
+      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1600",
+      technologies: ["React", "Playwright", "Ollama", "OpenAI"],
+      githubUrl: "https://github.com/Vignesh8205/playvision",
+      liveUrl: "https://github.com/Vignesh8205/playvision"
+    },
+    {
+      title: "OrangeHRM Automation Framework",
+      description: "A scalable, industry-standard test automation framework using Playwright and TypeScript with Page Object Model (POM) and robust CI/CD pipelines.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1600",
+      technologies: ["Playwright", "TypeScript", "GitHub Actions", "Jenkins"],
+      githubUrl: "https://github.com/Vignesh8205/playwrightAssignMentGitHubActionAndJenkins",
+      liveUrl: "https://github.com/Vignesh8205/playwrightAssignMentGitHubActionAndJenkins"
+    },
+    {
+      title: "Playwright TS Practice Suite",
+      description: "A comprehensive, hands-on learning suite demonstrating end-to-end testing best practices with Playwright, modular utilities, and multi-environment configurations.",
+      image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=1600",
+      technologies: ["Playwright", "TypeScript", "E2E Testing"],
+      githubUrl: "https://github.com/Vignesh8205/playwright-ts-practice-suite",
+      liveUrl: "https://github.com/Vignesh8205/playwright-ts-practice-suite"
+    },
+    {
+      title: "RestPilot - API Testing Tool",
+      description: "RestPilot is a Postman-like API testing tool built with React and Tailwind CSS. It allows users to send HTTP requests, view responses, convert between JSON and XML formats.",
+      image: Restpilot, 
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Material UI"],
+      githubUrl: "https://github.com/Vignesh8205/RestPilot",
+      liveUrl: "https://willowy-semifreddo-37866c.netlify.app/" 
     },
     {
       title: "Portfolio Website",
@@ -24,17 +48,8 @@ export default function ProjectsSection() {
       image: portfolio, 
       technologies: ["React", "Tailwind CSS", "React Icons"],
       githubUrl: "https://github.com/Vignesh8205/Portfolio-Website",
-      liveUrl: "#" 
-    },
-    {
-      title: "RestPilot - API Testing Tool",
-      description: "RestPilot is a powerful API testing tool built with React and Tailwind CSS. It allows users to send HTTP requests, view responses, convert between JSON and XML formats, and supports authentication, custom headers, file upload, and more with a user-friendly interface.",
-      image: Restpilot, 
-      technologies: ["React", "Tailwind CSS", "React Icons"],
-      githubUrl: "https://github.com/Vignesh8205/restpilot",
-      liveUrl: "#" 
+      liveUrl: "https://vignesh8205.netlify.app/" 
     }
-
   ];
 
   return (
