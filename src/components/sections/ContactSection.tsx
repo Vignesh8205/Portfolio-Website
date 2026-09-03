@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Section } from '../Section'
 import { Send } from 'lucide-react'
-import emailjs from '@emailjs/browser';
-
-
+import { supabase } from '../../lib/supabase'
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -12,6 +10,7 @@ export default function ContactSection() {
     mobile: '',
     message: '',
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const [errors, setErrors] = useState({
     name: '',
@@ -68,41 +67,43 @@ export default function ContactSection() {
   }
 
 
-  useEffect(() => {
-    emailjs.init("biXMHC6-SltyIHUNb");
-  }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (validate()) {
+      setIsSubmitting(true);
       console.log('Form Data:', formData);
 
-      emailjs.send(
-        "service_wojpvmv",
-        "template_wt7fuc3",
-        {
-          title: "vignesh",
-          name: formData.name,
-          email: formData.email,
-          mobile: formData.mobile,
-          message: formData.message,
-        },
-        "biXMHC6-SltyIHUNb"
-      ).then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-          alert("Email sent successfully!");
-          setFormData({ name: '', email: '', mobile: '', message: '' });
-        },
-        (err) => {
-          console.error("FAILED...", err);
-          alert("Failed to send email. Please try again.");
+      try {
+        // Save to Supabase database
+        const { error: supabaseError } = await supabase
+          .from('contacts')
+          .insert([
+            {
+              name: formData.name,
+              email: formData.email,
+              mobile: formData.mobile,
+              message: formData.message
+            }
+          ]);
+
+        if (supabaseError) {
+          console.error("Supabase Error:", supabaseError);
+          alert("Failed to save message to database. Please try again.");
+          setIsSubmitting(false);
+          return; // Stop if db save fails, or you could continue to email. We'll stop to be safe.
         }
-      );
 
-
-
+        // If we reach here, Supabase insertion was successful
+        alert("Message sent successfully!");
+        setFormData({ name: '', email: '', mobile: '', message: '' });
+        setIsSubmitting(false);
+      } catch (error) {
+        console.error("An unexpected error occurred:", error);
+        alert("An unexpected error occurred. Please try again later.");
+        setIsSubmitting(false);
+      }
     }
   }
 
@@ -174,10 +175,11 @@ export default function ContactSection() {
           {/* Submit */}
           <button
             type="submit"
-            className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center gap-2 transform hover:scale-105"
+            disabled={isSubmitting}
+            className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center gap-2 transform hover:scale-105 disabled:opacity-70 disabled:hover:scale-100"
           >
             <Send className="w-5 h-5" />
-            Send Message
+            {isSubmitting ? 'Sending...' : 'Send Message'}
           </button>
         </form>
       </div>
