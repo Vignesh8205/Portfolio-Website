@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { User, FileCode } from "lucide-react";
 import { ReactNode } from "react";
 import { Section } from "../Section";
+import { SiReact, SiNodedotjs, SiMongodb, SiExpress, SiCypress, SiPostman, SiSupabase } from 'react-icons/si';
+import { FaBolt, FaTheaterMasks } from 'react-icons/fa';
 
 // Define the type for each skill
 type Skill = {
@@ -33,14 +35,16 @@ const hoverEffect = {
 
 
 const skills: Skill[] = [
-    { name: 'React', icon: <span className="text-sky-500">⚛️</span> },
-    { name: 'Node.js', icon: <span className="text-green-600">🟢</span> },
-    { name: 'MongoDB', icon: <span className="text-green-700">🍃</span> },
-    { name: 'Express.js', icon: <span className="text-gray-600">🚂</span> },
-    { name: 'Cypress', icon: <span className="text-emerald-500">🧪</span> },
-    { name: 'Playwright', icon: <span className="text-pink-600">🎭</span> },
-    { name: 'Postman', icon: <span className="text-orange-500">📬</span> },
-    { name: 'Thunder Client', icon: <span className="text-yellow-500">⚡</span> },
+    { name: 'React', icon: <SiReact className="text-sky-500 text-xl" /> },
+    { name: 'Node.js', icon: <SiNodedotjs className="text-green-600 text-xl" /> },
+    { name: 'MongoDB', icon: <SiMongodb className="text-green-700 text-xl" /> },
+    { name: 'Express.js', icon: <SiExpress className="text-gray-600 text-xl" /> },
+    { name: 'Cypress', icon: <SiCypress className="text-emerald-500 text-xl" /> },
+    { name: 'Playwright', icon: <FaTheaterMasks className="text-pink-600 text-xl" /> },
+    { name: 'Postman', icon: <SiPostman className="text-orange-500 text-xl" /> },
+    { name: 'Thunder Client', icon: <FaBolt className="text-yellow-500 text-xl" /> },
+    { name: 'Supabase', icon: <SiSupabase className="text-green-500 text-xl" /> },
+    { name: 'Playwright MCP', icon: <FaTheaterMasks className="text-blue-500 text-xl" /> },
 ];
 
 // If Section is a custom component, optionally define its props

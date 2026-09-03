@@ -1,22 +1,26 @@
 import { motion } from 'framer-motion';
 import { GraduationCap, BadgeCheck, Code } from 'lucide-react';
+import { SiHtml5, SiCss3, SiBootstrap, SiJavascript, SiReact, SiNodedotjs, SiExpress, SiMongodb, SiMysql, SiPhp, SiCypress, SiSupabase } from 'react-icons/si';
+import { FaMicrosoft, FaTheaterMasks } from 'react-icons/fa';
 
 export default function EducationSection() {
 
     const skills = [
-        { name: "HTML", icon: "🌐" },
-        { name: "CSS", icon: "🎨" },
-        { name: "Bootstrap", icon: "🅱️" },
-        { name: "JavaScript", icon: "📜" },
-        { name: "ReactJS", icon: "⚛️" },
-        { name: "Node.js", icon: "🌿" },
-        { name: "Express.js", icon: "🚂" },
-        { name: "MongoDB", icon: "🍃" },
-        { name: "MySQL", icon: "🗄️" },
-        { name: "PHP", icon: "🐘" },
-        { name: "MS Office", icon: "🧩" },
-        { name: "Playwright", icon: "🎭" },
-        { name: "Cypress", icon: "🌲" },
+        { name: "HTML", icon: <SiHtml5 className="text-orange-500" /> },
+        { name: "CSS", icon: <SiCss3 className="text-blue-500" /> },
+        { name: "Bootstrap", icon: <SiBootstrap className="text-purple-500" /> },
+        { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
+        { name: "ReactJS", icon: <SiReact className="text-sky-500" /> },
+        { name: "Node.js", icon: <SiNodedotjs className="text-green-600" /> },
+        { name: "Express.js", icon: <SiExpress className="text-gray-600" /> },
+        { name: "MongoDB", icon: <SiMongodb className="text-green-700" /> },
+        { name: "MySQL", icon: <SiMysql className="text-blue-600" /> },
+        { name: "PHP", icon: <SiPhp className="text-indigo-500" /> },
+        { name: "MS Office", icon: <FaMicrosoft className="text-blue-500" /> },
+        { name: "Playwright", icon: <FaTheaterMasks className="text-pink-600" /> },
+        { name: "Cypress", icon: <SiCypress className="text-emerald-500" /> },
+        { name: "Supabase", icon: <SiSupabase className="text-green-500" /> },
+        { name: "Playwright MCP", icon: <FaTheaterMasks className="text-blue-500" /> },
     ];
 
     return (

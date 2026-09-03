@@ -1,6 +1,7 @@
 
 import portfolio from '../../assets/portfolio.png'
 import Restpilot from '../../assets/restpilot.png'
+import srithirumalai from '../../assets/srithirumalai.png'
 
 import { Section } from '../Section';
 import { ProjectCard } from '../ProjectCard';
@@ -10,6 +11,14 @@ export default function ProjectsSection() {
 
 
   const projects = [
+    {
+      title: "Sri Thirumalai Services",
+      description: "A comprehensive bilingual (English/Tamil) home and event services web application built for a multi-service business in Mayiladuthurai, providing electrical, plumbing, wedding decoration, and equipment rental services.",
+      image: srithirumalai,
+      technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "Supabase"],
+      githubUrl: "https://www.srithirumalaiservices.com/",
+      liveUrl: "https://www.srithirumalaiservices.com/"
+    },
     {
       title: "PlayVision – AI Test Reporter",
       description: "An intelligent, high-performance Playwright reporter using a React-based SPA. Integrates local (Ollama) and cloud (OpenAI) LLMs to automatically analyze test failures.",
