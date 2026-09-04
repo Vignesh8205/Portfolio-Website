@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Code, Mail, Github, Linkedin, Briefcase } from 'lucide-react';
 import { ThemeToggle } from './components/ThemeToggle';
 import { motion } from 'framer-motion';
-import profile from '../src/assets/profile.jpg'
+import profile from '../src/assets/profile.png'
 import resume from '../src/assets/Vignesh_Resume.pdf'
 import ContactWidget from './components/contactWidget/contactwidget';
 import { socialmedialink } from './Data';
@@ -133,11 +133,11 @@ function App() {
               {/* Glassmorphic backdrop */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-[2rem] transform rotate-6 scale-105 backdrop-blur-3xl -z-10"></div>
 
-              <div className="w-full h-full rounded-[2rem] overflow-hidden border border-white/20 shadow-2xl relative z-10 group">
+              <div className="w-full h-full rounded-[2rem] overflow-hidden border border-white/20 shadow-2xl relative z-10 group bg-gray-100 dark:bg-slate-800">
                 <img
                   src={profile}
                   alt="Profile"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
