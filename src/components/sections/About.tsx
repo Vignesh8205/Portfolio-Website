@@ -80,7 +80,7 @@ export default function AboutSection() {
                         <div className="grid grid-cols-2 gap-4">
                             <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
                                 <User className="w-5 h-5 text-blue-500 animate-bounce" />
-                                <span>1.5+ Years Experience</span>
+                                <span>2.5+ Years Experience</span>
                             </div>
                             <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
                                 <FileCode className="w-5 h-5 text-purple-500 animate-pulse" />

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { GraduationCap, BadgeCheck, Code } from 'lucide-react';
+import { GraduationCap, BadgeCheck, Code, Briefcase } from 'lucide-react';
 import { SiHtml5, SiCss3, SiBootstrap, SiJavascript, SiReact, SiNodedotjs, SiExpress, SiMongodb, SiMysql, SiPhp, SiCypress, SiSupabase } from 'react-icons/si';
 import { FaMicrosoft, FaTheaterMasks } from 'react-icons/fa';
 
@@ -31,11 +31,11 @@ export default function EducationSection() {
                 transition={{ duration: 0.8 }}
                 className="text-center mb-12"
             >
-                <h2 className="text-4xl font-extrabold text-blue-900">🎓 Education & Skills</h2>
-                <p className="text-lg text-gray-700 mt-2">Explore my academic journey, professional certifications & hands-on tech stack</p>
+                <h2 className="text-4xl font-extrabold text-blue-900">🎓 Experience, Education & Skills</h2>
+                <p className="text-lg text-gray-700 mt-2">Explore my professional experience, academic journey & hands-on tech stack</p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl w-full">
+            <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-10 max-w-7xl w-full">
                 {/* Education Card */}
                 <motion.div
                     initial={{ opacity: 0, x: -60 }}
@@ -74,6 +74,33 @@ export default function EducationSection() {
                         <div>
                             <p className="font-semibold text-green-700">Productivity Tools</p>
                             <p className="text-sm">MS Office – Word, Excel, PowerPoint</p>
+                        </div>
+                    </div>
+                </motion.div>
+
+                {/* Experience Card */}
+                <motion.div
+                    initial={{ opacity: 0, x: 60 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.4, duration: 0.7 }}
+                    className="bg-white shadow-2xl rounded-3xl p-6 hover:scale-105 transition-transform duration-300 border-l-4 border-indigo-500"
+                >
+                    <div className="flex items-center space-x-4 mb-4">
+                        <Briefcase className="w-8 h-8 text-indigo-600" />
+                        <h3 className="text-2xl font-semibold text-indigo-800">Experience</h3>
+                    </div>
+                    <div className="space-y-3 text-gray-700">
+                        <div>
+                            <p className="font-semibold text-indigo-700 text-lg leading-tight">Automation Test Engineer & Frontend Developer</p>
+                            <p className="text-sm font-medium mt-1">
+                                <a href="https://aidrivenconsultancy.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 hover:underline transition-colors">Ai Driven Consultancy</a>
+                            </p>
+                            <p className="text-sm italic text-gray-500 mb-2">2.5+ Years Experience</p>
+                            <ul className="text-sm list-disc list-inside space-y-1 text-gray-600 ml-1">
+                                <li>Architecting and maintaining robust end-to-end testing frameworks using <strong>Playwright</strong> and <strong>Cypress</strong>.</li>
+                                <li>Developing responsive, highly-interactive web interfaces with modern frontend technologies.</li>
+                                <li>Collaborating on digital transformation initiatives to ensure seamless user experiences and software reliability.</li>
+                            </ul>
                         </div>
                     </div>
                 </motion.div>
