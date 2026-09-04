@@ -48,7 +48,7 @@ export default function EducationSection() {
                         <h3 className="text-2xl font-semibold text-blue-800">B.E. in Computer Science</h3>
                     </div>
                     <p className="text-gray-800">Anna University</p>
-                    <p className="text-sm text-gray-600 italic">Completed in 2024</p>
+                    <p className="text-sm text-gray-600 italic">Completed in 2023</p>
                 </motion.div>
 
                 {/* Certifications Card */}
